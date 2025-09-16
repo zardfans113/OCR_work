@@ -30,7 +30,6 @@ OCR stands for "Optical Character Recognition." It is a technology that recogniz
     
     Pytesseract is a Python library that functions as a wrapper for Google's Tesseract-OCR Engine. Its primary purpose is to facilitate Optical Character Recognition (OCR) within Python applications, enabling the extraction of text from images and documents.
   <img width="921" height="442" alt="image" src="https://github.com/user-attachments/assets/bc4d0200-9529-4801-8567-c1275cd517df" />
-<img width="1721" height="909" alt="image (1)" src="https://github.com/user-attachments/assets/355ae1d4-66e9-4b05-b62a-8bb1a956f7a4" />
 **Explanation**:
 
 使用 Tesseract OCR 引擎對每張圖片進行文字辨識，並將所有圖片的辨識結果整合成一個 .txt 輸出。
