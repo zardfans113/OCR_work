@@ -45,9 +45,7 @@ OCR stands for "Optical Character Recognition." It is a technology that recogniz
 這裡 LLM 的角色為”輔助” user 判斷，而不是全部交給 LLM 判斷，原因如下:
 LLM 其實不清楚”表格內容”是什麼，判斷的基準是”隨機性”的。
 如果 fine-tune LLM，可能會讓 LLM ”只按照” 範例來挑選他認為的內容，可能會刪掉重要資訊且保留雜訊。所以這裡使用最穩健的方式保證表格內容不會遺失。
-<img width="1605" height="334" alt="image" src="https://github.com/user-attachments/assets/108414d3-5362-47f7-b54c-0b60c75f2326" />
-<img width="1605" height="131" alt="image (1)" src="https://github.com/user-attachments/assets/3d7fc33c-f8ce-464c-bd0c-ef76c3d68151" />
-<img width="1718" height="883" alt="image (2)" src="https://github.com/user-attachments/assets/2146056c-bc16-44ca-bb68-42bf05e875fa" />
+
 ### 針對 table 來撰寫 code 的 agent
 
 **overview**: 使用 **muti-agent & persona** 的概念，加上langchain 管理 pipeline，
@@ -56,12 +54,12 @@ LLM 其實不清楚”表格內容”是什麼，判斷的基準是”隨機性�
  “code reviwer” 等角色，各司其職，最後生成一個.csv
 
 遵守以下結構:
-# 明確 persona 身份
-# 指定對象（給誰用）
-# 規則簡明、無重複
-# 結構化輸出（JSON，欄位明確）
-# 範例明確
-# 最重要的 task 放最後
+明確 persona 身份
+指定對象（給誰用）
+規則簡明、無重複
+結構化輸出（JSON，欄位明確）
+範例明確
+最重要的 task 放最後
 
 **LLM**
 **Persona 1 - *Table Structure Analyst***: Analyzes the table and produces a schema and examples.
